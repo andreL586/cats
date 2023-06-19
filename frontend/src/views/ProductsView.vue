@@ -32,7 +32,6 @@ export default {
 
       axios.get(url).then(result => {
         this.products = result.data;
-        console.log(result.data);
       }, error => {
         console.error(error);
       });
