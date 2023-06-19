@@ -1,0 +1,20 @@
+services:
+      php-apache:
+            ports:
+                  - "80:80"
+            build: './build/php'
+            volumes:
+                  - ./app:/var/www/html
+      mysql:
+            ports:
+                  - "3306:3306"
+            build: './build/mysql'
+            environment:
+                  MYSQL_ROOT_PASSWORD: "password-password"
+                  MYSQL_DATABASE: "shop"
+            volumes:
+                  - dbData:/var/lib/mysql
+                  - ./data.sql:/docker-entrypoint-initdb.d/data.sql
+volumes:
+      app:
+      dbData:
