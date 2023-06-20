@@ -17,5 +17,5 @@
 App is running at: http://localhost:8080/
 
 # Login
-Username: shop
-Password: shop
+- Username: shop
+- Password: shop
