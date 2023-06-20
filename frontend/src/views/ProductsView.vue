@@ -2,7 +2,7 @@
   <div class="container">
     <div class="row">
       <div class="col-4" v-for="product in this.products" v-bind:key="product.id">
-        <ProducCardComponent :id="product.id" :image="product.image" :name="product.name" :description="product.description" :article_number="product.article_number"/>
+        <ProducCardComponent :id="product.id" :image="product.image" :name="product.name" :description="product.description" :article_number="product.article_number" :price="product.price"/>
       </div>
     </div>
   </div>

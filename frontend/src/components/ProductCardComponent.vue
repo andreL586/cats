@@ -7,6 +7,9 @@
     <div class="card-body">
       <h5 class="card-title">{{ name }}</h5>
       {{ description }}
+      <div class="card-price">
+        <div class="card-price--label">Price</div><div class="card-price--price">{{ price }}</div>
+      </div>
     </div>
     <div class="card-footer">
       Article Number: {{ article_number }}
@@ -22,7 +25,8 @@ export default {
     image: String,
     name: String,
     description: Text,
-    article_number: Number
+    article_number: Number,
+    price: String
   }
 }
 </script>
@@ -58,4 +62,17 @@ export default {
     right: 5%;
     transition: all .4s;
   }
+
+  .card-price {
+    margin-top: 1rem;
+    padding-top: 1rem;
+    display: flex;
+    border-top: 1px solid var(--bs-border-color-translucent);
+    justify-content: space-between;
+    align-items: end;
+  }
+  .card-price--price {
+    font-size: 2rem;
+  }
+
 </style>
